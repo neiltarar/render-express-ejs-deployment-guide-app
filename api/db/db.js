@@ -17,10 +17,6 @@ if (process.env.DATABASE_URL) {
         password: process.env.DB_PASSWORD,
         port: process.env.DB_PORT
     };
-
-    if (process.env.DEV_DB_PASSWORD) {
-        poolConfig.password = process.env.DEV_DB_PASSWORD;
-    }
 }
 
 const pool = new Pool(poolConfig);
