@@ -21,3 +21,15 @@ INSERT INTO students (first_name, last_name) VALUES
 ('Angela', 'Liu'),
 ('Jen', 'Feng Wong'),
 ('Ting', 'Li');
+
+
+-- If you want users logging in, you can create a table for users
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  email TEXT UNIQUE,
+  password_digest TEXT
+);
+
+-- After Running the create_dummy_user.js you can connect to your
+-- Render DB and inster the dummy user with the following command
+-- INSERT INTO users (email, password_digest) VALUES ('<email>', '<password_digest>');
